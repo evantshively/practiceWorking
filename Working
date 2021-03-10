@@ -45,3 +45,92 @@ while playAgain == 'yes' or playAgain == 'y':
     
     print('Do you want to play again? (yes or no)')
     playAgain = input()
+    
+    
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
+#import time and random Programs
+import random
+import time
+
+#print Introduction use '''''' command to format your intro on different lines
+
+def welcome():
+    print("Hello and welcome to Dragon Quest 77, what is your name?")
+    print()
+    playerName = input()
+    print("Welcome" + " " + playerName + "!")
+    print()
+
+def displayIntro():
+    print('''    After traveling for months with your carvan you arrive upon your destination Austin, Texas. 
+    This is the self-proclaimed Land of Dragons.
+    Directly in front of you is a mountain spilt into two caves.
+    In one cave lives the friendly dragon who sent you and invitation for his birthday party.
+    In the other cave, the dragon is greedy and hungry, and will eat you on sight.''')
+    print()
+    time.sleep(10)
+
+def chooseCave():
+    cave = ''
+    while cave != '1' and cave != '2':
+        print('''You arrive at the entrance to the two caves, your squire looks at you...
+Which cave do you enter? (type 1 or 2)''')
+        cave = input()
+        
+    return cave
+
+def checkCave(chosenCave):
+    print("You approach the cave...")
+    time.sleep(2)
+    print("As you enter the light from outside begins to dim...")
+    time.sleep(4)
+    print("You find yourself enveloped by the cold dark silence of the cave...") 
+    time.sleep(4)
+    print("A large dragon jumps out in front of you! The dragon opens its' jaws and...")
+    print()
+    time.sleep(4)
+    
+    friendlyCave = random.randint(1,2)
+    
+    if chosenCave == str(friendlyCave):
+        print("Yells: You made it, welcome to my Birthday Party!")
+        print()
+        time.sleep(3)
+        print("What did you bring the dragon for its' birthday?")
+        gift = input()
+        print("The dragon eyes the " + gift + " with a large smile.")
+        time.sleep(3)
+        print("Congratulations!")
+    else:
+        print("and...")
+        time.sleep(2)
+        print("begins to glitch out because the game is not finished")
+        time.sleep(3)
+        print("What do you do? (refund or fix)")
+        choice = str(input())
+        
+        if choice == "refund":
+            print("Your game studio goes under due to all the refund requests")
+        if choice == "fix":
+            print("You fix the game after months of work!")
+            time.sleep(3)
+            print("The dragon goobles you in one bite!")
+        if choice != "refund" and choice != "fix":
+            print("That is not going to help you here, you remain in glitch purgatory")
+                             
+
+playAgain = 'yes'
+while playAgain == 'yes' or playAgain =='y':
+    welcome()
+    displayIntro()
+    caveNumber = chooseCave()
+    checkCave(caveNumber)
+    
+    print('''
+Do you want to play again? (yes or no)''')
+    playAgain = input()
