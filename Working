@@ -1,0 +1,47 @@
+import random
+import time
+
+def displayIntro(): # def keyword defining a new function
+    print('''You are in a land full of dragons. In front of you, 
+    you see two caves. In one cave, the dragon is friendly
+    and will share his treasure with you. The other dragon 
+    is greedy and hungry, and will eat you on sight.''')
+    print()  # use of the three ''' makes editing easier and formating as well''
+
+def chooseCave():
+    cave = ''
+    while cave != '1' and cave != '2': # while loop repeats until a certain condition is True
+        print('Which cave will you go into? (1 or 2)')
+        cave = input()
+# and Boolean operator requires both conditions to be true  
+# or Boolean operator only requires that one is true
+# This will loop until the player picks a cave number (1 or 2)
+
+#Global vs. local scope is important for variables 
+    return cave # ends this loop chooseCave
+
+def checkCave(chosenCave): # chosen cave is the parameter for the CheckCave function
+    print('You approach the cave...')
+    time.sleep(2) # This uses the time program to pause the game for 2 seconds
+    print('It is dark and spooky...')
+    time.sleep(2)
+    print('A large dragon jumps out in front of you! The dragon opens his jaws and...')
+    print()
+    time.sleep(2)
+    
+    friendlyCave = random.randint(1,2) # uses the random program 
+    
+    if chosenCave == str(friendlyCave): # tranforms the int into a str
+        print('The dragon yells "here have some treasure my friend."')
+        
+    else:
+        print('Goobles you down in one bite!')
+        
+playAgain = 'yes'
+while playAgain == 'yes' or playAgain == 'y':
+    displayIntro()
+    caveNumber = chooseCave()
+    checkCave(caveNumber)
+    
+    print('Do you want to play again? (yes or no)')
+    playAgain = input()
