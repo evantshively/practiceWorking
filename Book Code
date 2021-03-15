@@ -1,0 +1,106 @@
+''' print("\tWelcome to the Three Year Old Conversation Program")
+print("\nThis program simulates a coversation with a three year old child")
+
+userAnswer = " " # This is called a sentry variable it checks to run the or stop the loop
+
+while userAnswer != "Because":
+    userAnswer = input("Why?\n")
+
+print("Oh. Okay") 
+'''
+
+'''
+blankList = [ ]
+counter = 0
+
+while counter <= 10:
+    blankList.append(counter)
+    counter = counter + 1
+
+print(blankList)   
+'''
+
+'''
+print("\tWelcome to the Resturant Program")
+print("\nYou enter a fancy resturant and are greeted by the Maitre D'")
+
+dollarSlipped = int(input("How many dollars do you slip the Maitre D'?: "))
+
+if dollarSlipped <= 10:
+    print("The Maitre D' states: There is a long wait for the next table")
+else:
+    print("The Maitre D glanced at you, right this way!")
+
+'''
+
+'''
+Break and Continue are also important commands that can be used in a loop
+'''
+'''
+count = 0 
+while True:
+    count += 1
+    if count > 10:
+        break
+    if count == 5:
+        continue
+    print(count)
+
+'''
+
+'''
+userName = ""
+while not userName:
+    userName = input("Please enter your username: ")
+
+password = ""
+while not password:
+    password = input("Please enter your password: ")
+
+if userName == "evan" and password == "1234":
+    print("Welcome Evan!")
+elif userName == "guest" or password == "guest":
+    print("Welcome Guest, you have limited access")
+else:
+    print("login failed")
+
+'''
+
+# Attempting the Guess My Number Game
+
+import random
+import time 
+
+''' PseudoCode
+
+random.randint() 
+time.sleep() 
+
+introduce game and explain
+
+pick a random number between 1 and 100
+
+set a certain number of guesses
+
+Ask a player for a guess
+
+While the player hasn't guessed the number OR run out of guesses
+    let the player guess a number
+
+Congratulate the Player or 
+    asks for a different number 
+
+Play again?? 
+'''
+
+print("\tWelcome to the Guess the Number Game)
+time.sleep(2)
+print('''\nFor this game you will attempt to guess a random number between 1 and 100
+If you guess the number correctly you will win a prize.
+You have a total of 10 Guesses. ''')
+time.sleep(2)
+
+beginGame = " "
+
+while beginGame != y 
+beginGame = input
