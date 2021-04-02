@@ -93,7 +93,7 @@ Congratulate the Player or
 Play again?? 
 '''
 
-print("\tWelcome to the Guess the Number Game)
+print("\tWelcome to the Guess the Number Game")
 time.sleep(2)
 print('''\nFor this game you will attempt to guess a random number between 1 and 100
 If you guess the number correctly you will win a prize.
@@ -102,5 +102,24 @@ time.sleep(2)
 
 beginGame = " "
 
-while beginGame != y 
-beginGame = input
+while beginGame != "y": 
+    beginGame = input("Would you like to begin the game?: (please enter y) ")
+
+numberOfGuesses = 10
+
+guess = 1
+
+randomNumber = random.randint(1, 100)
+
+while guess <= numberOfGuesses:
+    guess = guess + 1
+    userGuess = int(input("Please enter your number guess: "))
+    if userGuess == randomNumber:
+        print("Congrats! You guessed the right number in " + str(guess) + " guesses")
+    elif userGuess < randomNumber:
+        print("Your number is too low, guess again")
+    elif userGuess > randomNumber:
+        print("Your number is too high, guess again")
+else:
+    print("Sorry, you ran out of guesses")
+
