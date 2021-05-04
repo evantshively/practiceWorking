@@ -32,6 +32,55 @@ else:
     print("The Maitre D glanced at you, right this way!")
 
 '''
+High Scores Program
+'''
+# -*- coding: utf-8 -*-
+"""
+Created on Tue May  4 13:16:56 2021
+
+@author: evant
+"""
+
+# High Scores Program
+
+highScores = [1,2] # Blank list
+choice = None 
+
+while choice != "0":
+    print('''
+            High Scores 
+            0 - Exit
+            1 - Show Scores
+            2 - Add a Score
+            3 - Delete a Score
+            4 - Sort Scores
+            '''
+            )    #user Menu
+    choice = input("What do you select: ")
+    print()
+    if choice == "0":
+        print("Exiting Program, Goodbye")
+    elif choice == "1":
+        print("HighScores:")
+        for s in highScores:
+            print(s)
+    elif choice == "2":
+        score = int(input("What score did you get?: "))
+        highScores.append(score)
+    elif choice == "3":
+        score = int(input("Remove which score?: "))
+        if score in highScores:
+            highScores.remove(score)
+        else:
+            print(score, "isn't in the high scores list.")
+    elif choice == "4":
+        highScores.sort(reverse=True)
+    else:
+        print("Sorry, but you did not input a valid choice")
+
+input("\nPress Enter to Exit the Program")
+
+
 
 '''
 Break and Continue are also important commands that can be used in a loop
